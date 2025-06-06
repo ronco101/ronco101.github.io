@@ -40,26 +40,26 @@ body {
 }
 
 .topbar .right {
-  display: flex;
-  align-items: center;
-  gap: 1em;
+    display: flex;
+    align-items: center;
+    gap: 1em;
 }
 
 .topbar .right a {
-  color: #c9d1d9;
-  text-decoration: none;
-  transition: color 0.2s ease;
+    color: #c9d1d9;
+    text-decoration: none;
+    transition: color 0.2s ease;
 }
 
 .topbar .right a:hover {
-  color: #6a0ee3;
+    color: #6a0ee3;
 }
 
 .topbar .right svg {
-  display: block;
-  height: 20px;
-  width: 20px;
-  fill: currentColor;
+    display: block;
+    height: 20px;
+    width: 20px;
+    fill: currentColor;
 }
 
 .navbar {
@@ -136,9 +136,8 @@ body {
     justify-content: space-between;
     align-items: center;
     background-color: #0d1117;
+    border-radius: 6px;
     padding: 0.5em 1em;
-    border-top: 1px solid #30363d;
-    /* border-bottom: 1px solid #30363d; */
     font-size: 1.2em;
 }
 
@@ -179,3 +178,103 @@ body {
     top: 1px;
     font-size: 0.7em;
 }
+
+.site-footer {
+    background-color: #0d1117;
+    border-top: 1px solid #30363d;
+    padding: 1em 2em;
+    font-size: 0.85em;
+    color: #8b949e;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-left {
+    margin-bottom: 0.5em;
+}
+
+.footer-right {
+    display: flex;
+    gap: 1em;
+}
+
+.footer-right a {
+  display: inline-flex;
+  align-items: center;
+  color: inherit;
+  transition: color 0.2s ease;
+  text-decoration: none;
+}
+
+.footer-right a svg {
+    fill: currentColor;
+    width: 20px;
+    height: 20px;
+}
+
+.footer-right a:hover {
+    color: #6a0ee3;
+}
+
+.readme-card {
+  background-color: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  margin-top: 2em;
+  overflow: hidden;
+}
+
+.readme-tab {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.75em 1em;
+  font-size: 0.85em;
+  font-weight: bold;
+  color: #c9d1d9;
+  position: relative;
+}
+
+.readme-tab .material-icons {
+  font-size: 1rem;
+  color: #8b949e;
+}
+
+.readme-underline {
+  position: absolute;
+  bottom: 0;
+  left: 1em;
+  height: 2px;
+  width: 87px;
+  background-color: #f78166; /* GitHub-style orange-red */
+}
+
+.readme-body {
+  padding: 1em 1.5em;
+}
+
+.readme-body h2 {
+  margin: 0 0 0.5em 0;
+  font-size: 1.5em;
+  color: #f0f6fc;
+}
+
+.readme-body hr {
+  border: none;
+  border-top: 1px solid #30363d;
+  margin: 0.5em 0 1em 0;
+}
+
+.readme-body p {
+  margin: 0;
+  color: #8b949e;
+  font-size: 0.95em;
+}
+

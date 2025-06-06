@@ -6,10 +6,10 @@
     <title>Home | Ron Cohen</title>
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="assets/htmx.min.js"></script>
   </head>
 
   <body>
-
     <div class="topbar">
       <div class="left">
         <img src="assets/logo.png" alt="Logo" class="logo" />
@@ -40,20 +40,19 @@
     </div>
 
     <div class="container">
-      <!-- Commit Summary Bar -->
-      <div class="commit-bar">
-        <div class="left">
-          <img src="assets/avatar.jpg" alt="ronco101" class="avatar" />
-          <span class="username">Ron Cohen</span>
-          <span class="message">Drank tea</span>
-          <span class="status material-icons">check_circle</span>
-        </div>
-        <div class="right">
-          <span class="timestamp">6 hours ago</span>
-        </div>
-      </div>
-
       <div class="card">
+	<div class="commit-bar">
+	  <div class="left">
+	    <img src="assets/avatar.jpg" alt="ronco101" class="avatar" />
+	    <span class="username">Ron Cohen</span>
+	    <span class="message">Drank tea</span>
+	    <span class="status material-icons">check_circle</span>
+	  </div>
+	  <div class="right">
+	    <span class="timestamp">6 hours ago</span>
+	  </div>
+	</div>
+
         <div class="file-row header">
           <div class="file-name">Name</div>
           <div class="commit">Message</div>
@@ -80,21 +79,40 @@
 
         <div class="file-row">
           <div class="file-name"><span class="material-icons">rss_feed</span><a href="contact.html">contact.html</a></div>
-          <div class="commit">Business only</div>
-          <div class="timestamp">Hopefully not</div>
-        </div>
+	  <div class="commit">Business only</div>
+	  <div class="timestamp">Hopefully not</div>
+	</div>
+      </div>
+      
+      <div class="readme-card">
+	<div class="readme-tab">
+	  <span class="material-icons">menu_book</span>
+	  <span>README</span>
+	  <div class="readme-underline"></div>
+	</div>
+	
+	<div class="readme-body">
+	  <h2>About Me</h2>
+	  <hr />
+	  <p>Hi, I'm Ron Cohen! This is where I showcase all of my personal projects and school projects. I graduated from Rutgers University with a BS in Computer Science in 2025. The Blog section is where I will talk about projects, what's happening in the world of tech, and how I managed to switch to Linux. My contact information is in the Contact tab, where my email and socials. I hope you have a wonderful day!</p>
+	  <p>Remember to drink some tea and relax. Can't be stressed everyday of the week.</p>
+	</div>
 	
       </div>
     </div>
+    
     <footer class="site-footer">
       <div class="footer-content">
 	<div class="footer-left">
 	  <span>&copy; 2025 Ron Cohen</span>
 	</div>
-	<div class="footer-right" hx-get="partials/socials.html" hx-swap="innerHTML" hx-trigger="load"></div>
+	<div class="footer-right" 
+	     hx-get="partials/socials.html" 
+	     hx-swap="innerHTML" 
+	     hx-trigger="load">
+	</div>
       </div>
     </footer>
-
-    <script src="https://unpk.com/htmx.org@2.0.4"></script>
+    
   </body>
 </html>
