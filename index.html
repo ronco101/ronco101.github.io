@@ -1,91 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Home | Ron Cohen</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Home | Ron Cohen</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
 
-</head>
-<body>
+  <body>
 
-  <div class="topbar">
-    <div class="left">
-      <img src="assets/logo.png" alt="Logo" class="logo" />
-      <span class="breadcrumb">ronco101 / Ron Cohen</span>
-    </div>
-    <div class="right">
-      <!-- Optional: profile or icon buttons -->
-    </div>
-  </div>
-
-  <div class="navbar">
-    <a href="about.html">
-      <span class="material-icons">menu_book</span>
-      Wiki
-    </a>
-    <a href="projects.html">
-      <span class="material-icons">handyman</span>
-      Projects
-    </a>
-    <a href="blog.html">
-      <span class="material-icons">chat</span>
-      Blog
-    </a>
-    <a href="contact.html">
-      <span class="material-icons">rss_feed</span>
-      Contact
-    </a>
-  </div>
-
-  <div class="container">
-    <!-- Commit Summary Bar -->
-    <div class="commit-bar">
+    <div class="topbar">
       <div class="left">
-	<img src="assets/avatar.jpg" alt="ronco101" class="avatar" />
-	<span class="username">Ron Cohen</span>
-	<span class="message">Drank tea</span>
-	<span class="status material-icons">check_circle</span>
+        <img src="assets/logo.png" alt="Logo" class="logo" />
+        <span class="breadcrumb">ronco101 / Ron Cohen</span>
       </div>
-      <div class="right">
-	<span class="timestamp">6 hours ago</span>
+      <div class="right" hx-get="partials/socials.html" hx-swap="innerHTML" hx-trigger="load">
+	<span>Loading...</span>
       </div>
     </div>
 
-    <div class="card">
-      <div class="file-row header">
-	<div class="file-name">Name</div>
-	<div class="commit">Message</div>
-	<div class="timestamp">Updated?</div>
-      </div>
-
-      <div class="file-row">
-	<div class="file-name"><span class="material-icons">menu_book</span><a href="about.html">about.html</a></div>
-	<div class="commit">Read about me!</div>
-	<div class="timestamp">Almost</div>
-      </div>
-
-      <div class="file-row">
-	<div class="file-name"><span class="material-icons">handyman</span><a href="projects.html">projects.html</a></div>
-	<div class="commit">Cool stuff</div>
-	<div class="timestamp">Everyday</div>
-      </div>
-
-      <div class="file-row">
-	<div class="file-name"><span class="material-icons">chat</span><a href="blog.html">blog.html</a></div>
-	<div class="commit">Update blog.html</div>
-	<div class="timestamp">Coming Soon</div>
-      </div>
-
-      <div class="file-row">
-	<div class="file-name"><span class="material-icons">rss_feed</span><a href="contact.html">contact.html</a></div>
-	<div class="commit">Business only</div>
-	<div class="timestamp">Hopefully not</div>
-      </div>
-
+    <div class="navbar">
+      <a href="about.html">
+        <span class="material-icons">menu_book</span>
+        Wiki
+      </a>
+      <a href="projects.html">
+        <span class="material-icons">handyman</span>
+        Projects
+      </a>
+      <a href="blog.html">
+        <span class="material-icons">chat</span>
+        Blog
+      </a>
+      <a href="contact.html">
+        <span class="material-icons">rss_feed</span>
+        Contact
+      </a>
     </div>
-  </div>
 
-</body>
+    <div class="container">
+      <!-- Commit Summary Bar -->
+      <div class="commit-bar">
+        <div class="left">
+          <img src="assets/avatar.jpg" alt="ronco101" class="avatar" />
+          <span class="username">Ron Cohen</span>
+          <span class="message">Drank tea</span>
+          <span class="status material-icons">check_circle</span>
+        </div>
+        <div class="right">
+          <span class="timestamp">6 hours ago</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="file-row header">
+          <div class="file-name">Name</div>
+          <div class="commit">Message</div>
+          <div class="timestamp">Updated?</div>
+        </div>
+
+        <div class="file-row">
+          <div class="file-name"><span class="material-icons">menu_book</span><a href="about.html">about.html</a></div>
+          <div class="commit">Read about me!</div>
+          <div class="timestamp">Almost</div>
+        </div>
+
+        <div class="file-row">
+          <div class="file-name"><span class="material-icons">handyman</span><a href="projects.html">projects.html</a></div>
+          <div class="commit">Cool stuff</div>
+          <div class="timestamp">Everyday</div>
+        </div>
+
+        <div class="file-row">
+          <div class="file-name"><span class="material-icons">chat</span><a href="blog.html">blog.html</a></div>
+          <div class="commit">Update blog.html</div>
+          <div class="timestamp">Coming Soon</div>
+        </div>
+
+        <div class="file-row">
+          <div class="file-name"><span class="material-icons">rss_feed</span><a href="contact.html">contact.html</a></div>
+          <div class="commit">Business only</div>
+          <div class="timestamp">Hopefully not</div>
+        </div>
+	
+      </div>
+    </div>
+    <footer class="site-footer">
+      <div class="footer-content">
+	<div class="footer-left">
+	  <span>&copy; 2025 Ron Cohen</span>
+	</div>
+	<div class="footer-right" hx-get="partials/socials.html" hx-swap="innerHTML" hx-trigger="load"></div>
+      </div>
+    </footer>
+
+    <script src="https://unpk.com/htmx.org@2.0.4" integrity="sha384-HGfztofotfshcF7+8n44JQL2oJmowVChPTg48S+jvZoztPfvwD79OC/LTtG6dMp+" crossorigin="anonymous"></script>
+  </body>
 </html>
