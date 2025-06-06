@@ -3,32 +3,89 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ron Cohen | Portfolio</title>
+  <title>Home | Ron Cohen</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 </head>
 <body>
-  <header>
-    <h1><a href="index.html">Ron Cohen</a></h1>
-    <nav id="nav">
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="blog.html">Blog</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <button id="navToggle">☰</button>
-  </header>
 
-  <main>
-    <section>
-      <h2>Welcome!</h2>
-      <p>This is my personal portfolio website. I build cool things.</p>
-    </section>
-  </main>
+  <div class="topbar">
+    <div class="left">
+      <img src="assets/logo.png" alt="Logo" class="logo" />
+      <span class="breadcrumb">ronco101 / Ron Cohen</span>
+    </div>
+    <div class="right">
+      <!-- Optional: profile or icon buttons -->
+    </div>
+  </div>
 
-  <footer>
-    <p>&copy; 2025 Ron Cohen. All rights reserved.</p>
-  </footer>
+  <div class="navbar">
+    <a href="about.html">
+      <span class="material-icons">menu_book</span>
+      Wiki
+    </a>
+    <a href="projects.html">
+      <span class="material-icons">handyman</span>
+      Projects
+    </a>
+    <a href="blog.html">
+      <span class="material-icons">chat</span>
+      Blog
+    </a>
+    <a href="contact.html">
+      <span class="material-icons">rss_feed</span>
+      Contact
+    </a>
+  </div>
 
-  <script src="script.js"></script>
+  <div class="container">
+    <!-- Commit Summary Bar -->
+    <div class="commit-bar">
+      <div class="left">
+	<img src="assets/avatar.jpg" alt="ronco101" class="avatar" />
+	<span class="username">Ron Cohen</span>
+	<span class="message">Drank tea</span>
+	<span class="status material-icons">check_circle</span>
+      </div>
+      <div class="right">
+	<span class="timestamp">6 hours ago</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="file-row header">
+	<div class="file-name">Name</div>
+	<div class="commit">Message</div>
+	<div class="timestamp">Updated?</div>
+      </div>
+
+      <div class="file-row">
+	<div class="file-name"><span class="material-icons">menu_book</span><a href="about.html">about.html</a></div>
+	<div class="commit">Read about me!</div>
+	<div class="timestamp">Almost</div>
+      </div>
+
+      <div class="file-row">
+	<div class="file-name"><span class="material-icons">handyman</span><a href="projects.html">projects.html</a></div>
+	<div class="commit">Cool stuff</div>
+	<div class="timestamp">Everyday</div>
+      </div>
+
+      <div class="file-row">
+	<div class="file-name"><span class="material-icons">chat</span><a href="blog.html">blog.html</a></div>
+	<div class="commit">Update blog.html</div>
+	<div class="timestamp">Coming Soon</div>
+      </div>
+
+      <div class="file-row">
+	<div class="file-name"><span class="material-icons">rss_feed</span><a href="contact.html">contact.html</a></div>
+	<div class="commit">Business only</div>
+	<div class="timestamp">Hopefully not</div>
+      </div>
+
+    </div>
+  </div>
+
 </body>
 </html>
