@@ -1,35 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Blog | Ron Cohen</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header>
-    <h1><a href="index.html">Your Name</a></h1>
-    <nav id="nav">
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="blog.html">Blog</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <button id="navToggle">☰</button>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Home | Ron Cohen</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="assets/htmx.min.js"></script>
+  </head>
 
-  <main>
-    <section>
-      <h2>Blog</h2>
-      <p>Thoughts, tutorials, and updates.</p>
-      <div id="blog-container"></div>
-    </section>
-  </main>
+  <body>
+    <div hx-get="partials/topbar.html" hx-swap="outerHTML" hx-trigger="load"></div>
 
-  <footer>
-    <p>&copy; 2025 Ron Cohen. All rights reserved.</p>
-  </footer>
+    <div hx-get="partials/navbar.html" hx-swap="outerHTML" hx-trigger="load"></div>
+    
+    <div class="container">
 
-  <script src="script.js"></script>
-</body>
+      <div hx-get="partials/container.html" hx-swap="outerHTML" hx-trigger="load"></div>
+      
+      <div class="readme-card">
+	<div class="readme-tab">
+	  <span class="material-icons">menu_book</span>
+	  <span>README</span>
+	  <div class="readme-underline"></div>
+	</div>
+	
+	<div class="readme-body">
+	  <h2>About Me</h2>
+	  <hr />
+	  <p>Hi, I'm Ron Cohen! This is where I showcase all of my personal projects and school projects. I graduated from Rutgers University with a BS in Computer Science in 2025. The Blog section is where I will talk about projects, what's happening in the world of tech, and how I managed to switch to Linux. My contact information is in the Contact tab, that's where my email and socials are located. I hope you have a wonderful day!</p>
+	  <p>Remember to drink some tea and relax. Can't be stressed everyday of the week.</p>
+	</div>
+	
+      </div>
+    </div>
+    
+    <div hx-get="partials/footer.html" hx-swap="outerHTML" hx-trigger="load"></div>
+    
+  </body>
 </html>
