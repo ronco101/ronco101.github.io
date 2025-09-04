@@ -1,45 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>Home | Ron Cohen</title>
-        <link rel="stylesheet" href="style.css" />
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <script src="assets/htmx.min.js"></script>
-    </head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Home | Ron Cohen</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="assets/htmx.min.js"></script>
+  </head>
 
-    <body>
-        <div hx-get="partials/topbar.html" hx-swap="outerHTML" hx-trigger="load"></div>
+  <body>
+    <div hx-get="partials/topbar.html" hx-swap="outerHTML" hx-trigger="load"></div>
 
-        <div hx-get="partials/navbar.html" hx-swap="outerHTML" hx-trigger="load"></div>
+    <div hx-get="partials/navbar.html" hx-swap="outerHTML" hx-trigger="load"></div>
 
-        <div class="container">
+    <div class="container">
+      <div hx-get="partials/container.html" hx-swap="outerHTML" hx-trigger="load"></div>
 
-            <div hx-get="partials/container.html" hx-swap="outerHTML" hx-trigger="load"></div>
-
-            <div class="readme-card">
-                <div class="readme-tab">
-                    <span class="material-icons">menu_book</span>
-                    <span>README</span>
-                    <div class="readme-underline"></div>
-                </div>
-
-                <div class="readme-body">
-                    <h2>Blogs Comming Soon</h2>
-                    <hr />
-                    <p>Hello! This is where my blog post would be <s>if I had any</s>. So for right now, you get to see this random XKCD comic I love.<br><br></p>
-                    <div style="display: flex; justify-content: center;">
-                        <img 
-                            src="https://imgs.xkcd.com/comics/check_engine.png" 
-                            alt="This isn't that funny :(" />
-                    </div>
-                </div>
-
-            </div>
+      <div class="readme-card">
+        <div class="readme-tab">
+          <span class="material-icons">menu_book</span>
+          <span>BLOGS</span>
+          <div class="readme-underline"></div>
         </div>
 
-        <div hx-get="partials/footer.html" hx-swap="outerHTML" hx-trigger="load"></div>
+        <div class="readme-body">
+          <h2>Blog Posts</h2>
+          <hr />
+          <div id="blog-posts"></div>
+        </div>
 
-    </body>
+      </div>
+
+    </div>
+
+    <div hx-get="partials/footer.html" hx-swap="outerHTML" hx-trigger="load"></div>
+    <script>
+      // Fetch posts.json and render posts
+      fetch("post.json")
+    .then(response => response.json())
+    .then(posts => {
+        const container = document.getElementById("blog-posts");
+        posts.forEach(post => {
+            const card = document.createElement("div");
+            card.classList.add("blog-card");
+
+            card.innerHTML = `
+            <h3><a href="${post.link}">${post.title}</a></h3>
+            <p><em>${post.date}</em></p>
+            <p>${post.summary}</p>
+          `;
+
+            container.appendChild(card);
+        });
+    })
+    .catch(err => {
+        document.getElementById("blog-posts").innerHTML = "<p>Failed to load blog posts.</p>";
+        console.error(err);
+    });
+    </script>
+  </body>
 </html>

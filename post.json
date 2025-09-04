@@ -1,8 +1,8 @@
 [
   {
-    "title": "Getting Started with My Portfolio",
-    "date": "2025-06-05",
-    "summary": "I finally got my portfolio website up and running on GitHub Pages...",
-    "link": "posts/post1.html"
+      "title": "A Vim User In A VSCode World",
+      "date": "09/03/2025",
+      "summary": "The only thing I'm known for in my office is that I use vim. They call me VRon",
+      "link": "posts/post1.html"
   }
 ]
