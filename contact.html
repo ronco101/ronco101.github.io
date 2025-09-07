@@ -11,7 +11,7 @@
       .social-link {
 	  display: inline-flex;
 	  align-items: center;
-	  color: #8b949e;         /* Default SVG color */
+	  color: #ffffff;         /* Default SVG color */
 	  transition: color 0.2s ease;
 	  text-decoration: none;
       }
@@ -19,20 +19,14 @@
       .social-link:hover {
           color: #6a0ee3;
       }
-
-      .social-link svg {
-          fill: currentColor;
-          /* width: 80px; */
-          /* height: 80px; */
-          transition: fill 0.2s ease;
-      }
     </style>
   </head>
 
   <body>
-    <div hx-get="partials/topbar.html" hx-swap="outerHTML" hx-trigger="load"></div>
-
-    <div hx-get="partials/navbar.html" hx-swap="outerHTML" hx-trigger="load"></div>
+    <div class=main-container>
+      <div hx-get="partials/topbar.html" hx-swap="outerHTML" hx-trigger="load"></div>
+      <div hx-get="partials/navbar.html" hx-swap="outerHTML" hx-trigger="load"></div>
+    </div>
     
     <div class="container">
 
@@ -48,15 +42,11 @@
 	<div class="readme-body">
 	  <h2>Contact Information</h2>
 	  <hr />
-	  <p>The best place to reach me is LinkedIn</p>
-	  <br>
-	  <div style="display: flex; justify-content: center;">
+	  <p>
+	    The best place to reach me is 
 	    <a href="https://www.linkedin.com/in/roncohen408/" class="social-link" target="_blank" aria-label="LinkedIn" style="display: inline-block;">
-	      <svg width="80" height="80" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-		<path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8.5H4.5V24H.5V8.5zM8.5 8.5H12V10.08C12.65 9.13 13.93 8.33 15.5 8.33 19.06 8.33 20 10.61 20 14.04V24H16V14.81C16 12.87 15.5 11.5 14 11.5S12 12.87 12 14.81V24H8.5V8.5z"/>
-	      </svg>
-	    </a>
-	  </div>
+	    LinkedIn (Click here!)</a>
+	  </p>
 	</div>
 	
       </div>

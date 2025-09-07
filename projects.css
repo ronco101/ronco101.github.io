@@ -1,7 +1,16 @@
-.main-container {
-  max-width: 980px;
+/* .main-container { */
+/*     max-width: 960px; */
+/*     margin: 0 auto; */
+/*     padding: 0 0em; */
+/*     border: 1px solid #30363d; */
+/*     border-radius: 0px 0px 6px 6px; */
+/*     overflow: hidden; */
+/* } */
+
+.project-container {
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 2em 1em;
+  padding: 0em 0em 1.5em 0em;
 }
 
 .project-page {
@@ -15,8 +24,8 @@
   align-self: flex-start;
   position: sticky;
   top: 2em;
-  flex: 1 1 240px;
-  max-width: 280px;
+  flex: 1 1 200px;
+  max-width: 210px;
   text-align: center;
   background-color: #161b22;
   border: 1px solid #30363d;
@@ -52,7 +61,7 @@
 }
 
 .project-grid {
-  flex: 2 1 600px;
+  flex: 2 1 200px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1.2em;
@@ -77,11 +86,11 @@
 }
 
 .project-card:hover {
-  border-color: #58a6ff;
+  border-color: #6a0ee3;
 }
 
 .project-name {
-  color: #58a6ff;
+  color: #6a0ee3;
   font-weight: 600;
   text-decoration: none;
   font-size: 1.05em;

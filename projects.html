@@ -1,51 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>Home | Ron Cohen</title>
-        <link rel="stylesheet" href="style.css" />
-        <link rel="stylesheet" href="projects.css" />
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <script src="assets/htmx.min.js"></script>
-    </head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Home | Ron Cohen</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="assets/htmx.min.js"></script>
+  </head>
 
-    <body>
-        <div hx-get="partials/topbar.html" hx-swap="outerHTML" hx-trigger="load"></div>
+  <body>
+    <div class=main-container>
+      <div hx-get="partials/topbar.html" hx-swap="outerHTML" hx-trigger="load"></div>
+      <div hx-get="partials/navbar.html" hx-swap="outerHTML" hx-trigger="load"></div>
+    </div>
 
-        <div hx-get="partials/navbar.html" hx-swap="outerHTML" hx-trigger="load"></div>
-        <div class="main-container">
-            <div class="project-page">
-                <!-- Sidebar -->
-                <!-- <div class="container"> -->
-                <aside class="sidebar">
-                    <img src="assets/avatar.jpg" alt="Ron Cohen" class="profile-pic" />
-                    <h2>Ron Cohen</h2>
-                    <p class="username">ronco101</p>
-                    <p class="bio">Just your average programmer programming programs that work, occasionally.</p>
-                </aside>
-                <section class="project-grid">
-                    <div class="project-card">
-                        <a href="https://github.com/ronco101/Card-Engine" class="project-name">Card-Engine</a>
-                        <p>Creating a simple foundation for card games</p>
-                        <div class="project-meta">
-                            <span class="lang"><span class="dot python"></span> Python</span>
-                            <span class="badge">Public</span>
-                        </div>
-                    </div>
+    <div class="container">
+      <div hx-get="partials/container.html" hx-swap="outerHTML" hx-trigger="load"></div>
 
-                    <div class="project-card">
-                        <a href="https://github.com/ronco101/TrainDatabase" class="project-name">TrainDatabase</a>
-                        <p>A database for Trains</p>
-                        <div class="project-meta">
-                            <span class="lang"><span class="dot java"></span> Java</span>
-                            <span class="badge">Public</span>
-                        </div>
-                    </div>
-                </section>
-            </div>
+      <div class="readme-card">
+        <div class="readme-tab">
+          <span class="material-icons">menu_book</span>
+          <span>THINGS</span>
+          <div class="readme-underline"></div>
         </div>
-        <div hx-get="partials/footer.html" hx-swap="outerHTML" hx-trigger="load"></div>
 
-    </body>
+        <div class="readme-body">
+          <h2>Projects</h2>
+          <hr />
+          <div id="blog-posts"></div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div hx-get="partials/footer.html" hx-swap="outerHTML" hx-trigger="load"></div>
+    <script>
+      // Fetch posts.json and render posts
+      fetch("projects.json")
+    .then(response => response.json())
+    .then(posts => {
+        const container = document.getElementById("blog-posts");
+        posts.forEach(post => {
+            const card = document.createElement("div");
+            card.classList.add("blog-card");
+
+            card.innerHTML = `
+            <h3><a href="${post.link}">${post.title}</a></h3>
+            <p>${post.summary}</p>
+            <hr />
+          `;
+
+            container.appendChild(card);
+        });
+    })
+    .catch(err => {
+        document.getElementById("blog-posts").innerHTML = "<p>Failed to load blog posts.</p>";
+        console.error(err);
+    });
+    </script>
+  </body>
 </html>

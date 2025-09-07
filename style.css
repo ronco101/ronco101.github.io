@@ -57,15 +57,15 @@ body {
 
 .topbar .right svg {
     display: block;
-    height: 20px;
-    width: 20px;
+    height: 35px;
+    width: 35px;
     fill: currentColor;
 }
 
 .navbar {
     background-color: #0d1117;
     border-top: 1px solid #30363d;
-    border-bottom: 1px solid #30363d;
+    /* border-bottom: 1px solid #30363d; */
     padding: 0.5em 1em;
     display: flex;
     gap: 1.5em;
@@ -91,17 +91,32 @@ body {
   color: #6a0ee3;
 }
 
+.main-container {
+    max-width: 960px;
+    margin: 0 auto;
+    /* padding: 0 0em; */
+    border: 1px solid #30363d;
+    border-radius: 0px 0px 6px 6px;
+    overflow: hidden;
+}
+
 .container {
     max-width: 960px;
-    margin: 2em auto;
+    margin: 1em auto;
     padding: 0 1em;
 }
+
+@media (max-width: 787px) {
+    .card {
+	display: none !important;
+    }
+}
+
 .card {
     background-color: #161b22;
     border: 1px solid #30363d;
     border-radius: 6px;
-    padding: 0.3em; /* No inner padding so rows align edge-to-edge */
-    /* margin-top: 1.5em; */
+    padding: 0.3em; 
     font-family: system-ui, sans-serif;
 }
 
@@ -136,9 +151,14 @@ body {
     flex: 3;
 }
 
-.timestamp {
+.timestamp-commit {
     flex: 1;
-    text-align: right;
+    text-align: left;
+}
+
+.timestamp {
+    flex: 0.7;
+    text-align: left;
 }
 
 .commit-bar {
@@ -263,7 +283,7 @@ body {
   left: 1em;
   height: 2px;
   width: 87px;
-  background-color: #f78166; /* GitHub-style orange-red */
+  background-color: #f78166;
 }
 
 .readme-body {
@@ -285,6 +305,6 @@ body {
 .readme-body p {
   margin: 0;
   color: #8b949e;
-  font-size: 0.95em;
+  font-size: 1em;
 }
 
