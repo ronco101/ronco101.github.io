@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Home | Ron Cohen</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="/assets/htmx.min.js"></script>
+    <style>
+      .social-link {
+	  display: inline-flex;
+	  align-items: center;
+	  color: #ffffff;
+	  transition: color 0.2s ease;
+	  text-decoration: none;
+      }
+
+      .social-link:hover {
+          color: #6a0ee3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class=main-container>
+      <div hx-get="/partials/topbar.html" hx-swap="outerHTML" hx-trigger="load"></div>
+      <div hx-get="/partials/navbar.html" hx-swap="outerHTML" hx-trigger="load"></div>
+    </div>
+
+    <div class="container">
+      <!-- <div hx-get="/partials/container.html" hx-swap="outerHTML" hx-trigger="load"></div> -->
+
+      <div class="readme-card">
+        <div class="readme-tab">
+          <span class="material-icons">menu_book</span>
+          <span>ILUVTUX</span>
+          <div class="readme-underline"></div>
+        </div>
+
+        <div class="readme-body">
+          <h2>Life Under Linux</h2>
+          <hr />
+	  <p><em>
+	      This is semi satirical, a lot of my opinions are exaggerated and I try to poke fun at everything, especially
+	      Linux users who have no awareness of the people around them. If you take genuine offense to this, I'm sorry
+	      you related yourself to any harmful stereotypes I may have made? I'm just trying to make something enjoyable
+	      for everyone to read. 	
+	  </em></p>
+	  <br>
+	  <p>
+	    Ah, yes. I finally get to say "I use Arch btw" like some insufferable fool with their head so far up their ass
+	    you begin to wonder if they're happy there. The answer is yes, they are happy sniffing their own filth. But yes,
+	    I am currently using CachyOS. I have tried other distros like mint, but an arch based system is what works best for me.
+	    The sole reason to why I am running Linux is because I hate Microsoft and the developer experience is much better
+	    under a Unix based machine. You might disagree with me, and you are allowed to have your own opinions even if they're
+	    wrong, but this is what I believe and everything simply just works. I'm mostly talking about the developer experience,
+	    something like drawing using a drawing tablet works right out of the box as well, but that is not my focus. If you're
+	    curious about Linux and want to give it a try, maybe this can give you some insight without the bullshit, bias, and
+	    cluelessness you might get from other Linux users or journalists. Journalists do not know how to use computers and
+	    nothing you say to me now will make me believe you. All kidding aside, here's my very exciting Linux journey.
+	  </p>
+	  <h3>Installing Linux</h3>
+	  <p>
+	    There is not a single thing on this planet that I can say to make this part exciting. Installing any new operating
+	    system is the equivalent to pulling out your own nails and teeth. Somehow, Windows has the WORST installer I have
+	    ever used. This isn't me saying Linux has the good installer, the windows installer requires you to have a
+	    Microsoft account. There are ways around it, but I should not have to open up the terminal using Shift+F10 and
+	    type in "oobe\bypassnro" to bypass the login. Regardless, the install process is so mindnumbing, I'm just used to
+	    whatever crap I get from it now. Did you know your system can fail to install? I DO NOW. After running the installer
+	    again because I wiped my laptop hard drive, it worked. Yippee. I installed EndeavourOS, it's Arch with a coat of paint
+	    on it. It's a very good "beginner" system, it's for people who are looking something more complicated than Ubuntu/Debian
+	    without going through the Arch install process. You can tell me I need to install base or vanilla arch, I do not care.
+	    I just want a computer I can do my work on. That was until I destroyed my system because I can never have anything nice
+	    in my life. I then moved on to mint. Somehow, an even worse install experience than the EndeavourOS. Clearly didn't work
+	    out for me, so I moved to Manjaro. Wow, that's cool. Anyway, don't use Manjaro. And here I am today using CachyOS. Do I
+	    even like it??? Yeah, it just works and I'm not running into any serious issues yet, despite being on Wayland. If you
+	    don't know what Wayland is, I'm begging you to just stop asking questions. It does not matter, if you use your computer
+	    to watch YouTube or do some light gaming, you do not need to know what Wayland or X11 is for your own sanity. After becoming
+	    a masochist, no sane person does what I did, I can tell you with great confidence that Windows still has the worst install
+	    experience I have ever gone through.
+	  </p>
+	  <h3>Everything just works?</h3>
+	  <p>
+	    If you know nothing about Linux, this might not make that much sense to you. I'm talking 10 years ago now, Linux was not
+	    plug and play. It is insane to me that I was able to plug in my drawing tablet and have it work automatically. Of course
+	    I needed to install some drivers to use the buttons, but it worked perfectly. KDE Plasma, while some people hate it for
+	    good and weird reasons, might be one of the best desktop experiences you can ever get on a computer. Obviously, you can
+	    construct or find better configurations for a desktop environment, but I'm not talking about that. I'm not talking about
+	    the team behind it either, I'm talking about the fact that everything worked as intended with little or zero input. You
+	    really start to wonder who the fuck was using Linux before hand? The answer is people smarter than you or I. Unless you
+	    are a Kernel developer or Linus Torval himself. They are the ones maintaining and made Linux respectively, if they don't
+	    know what they're doing, god help us all. I feel like I have to mention that I'm kidding now despite my original warning.
+	    Linux was usable, but never to the extent of just plugging something in and having it work immediately. Also want to
+	    give a shoutout to possibly the only person on this planet to use uEmacs, Linus Torval. He is the only one maintaining
+	    it and says that he's too old for syntax highlighting. I'm not even making fun of him, imagine someone told you that,
+	    "Yeah, I maintain an abandoned text editor that I use to write code for the Linux Kernel." What the fuck do you say to
+	    that? Nothing you can say or do will ever be as cool as that, no personal project can compete. Well, it's better at
+	    least much better than Ed, the text editor. Not Ed, from Ed, Edd, And Eddie. If you want to know what the 9th circle
+	    of hell is, do a quick Google search on the text editor. That is how they wrote code before Vi. Speaking of Vi.
+	  </p>
+	  <h3>Vim, My beloved</h3>
+	  <p>
+	    I use Neovim btw. If you ever see me in person, you have the right to strangle the life out of me. If you're wondering
+	    why I'm not worried about someone important reading this, they would have stopped after the warning. People who have no fun
+	    take those things seriously. Oh right, this is supposed to be about how I use vim. Yeah, I use Neovim with what I like to
+	    call a small and simple config and custom color scheme you can find on my
+	    <a href="https://github.com/ronco101" class="social-link" target="_blank" aria-label="GitHub" style="display: inline-block;">
+	      Github</a>. I'm going to be the first to say that I love vim and it's great. Everything just makes sense to me, and I'm
+	    much more comfortable writing code in vim thanks to my config. I would do basically everything in vim if I could. But
+	    in the end it's a text editor. If you want to get fast at typing and force yourself to learn the keyboard, vim is pretty
+	    good. Here is the part where I get death threats, this is a half joke. If this gets to the larger Linux community, they will
+	    hate me and I just have to accept that. I actually switched to Emacs and I use Vim motions with it. This is solely because
+	    they work great together. Actually, the only sad part about Emacs is that if I want to learn it, I would need to dedicate
+	    the rest of my 20s to it and I'm not going to do that. I'm going to take as many shortcuts as I can to use this god damn
+	    text editor. All kidding aside, if you really do feel slow, I would recommend learning Vim or Emacs. It's not gonna make
+	    you suddenly the best programmer ever, but it forces you into such a workflow that just makes sense. But if I ever catch
+	    one of you using Nano, I will write about you on my blog. You are a complete nerd and you should feel bad. If my manager
+	    ever sees this, he will rescind my offer to stay at the company because he used Nano once and I can never forgive him.
+	    But Vim/Emacs is not the only thing I use. I am right now using Sway for my developer environment, this just allows me
+	    organize my workspaces better so I can more efficiently slack off instead of doing anything productive. In all seriousness,
+	    it allows me to have my hands on the keyboard at all possible times. You don't need to learn all the tools that I did.
+	    I just had the time to do it, I'm not better than anyone for using Linux. I'm only better than the people who literally do
+	    nothing. Playing video games all day and watching some shitty show is not a hobby, get your ass up and doing something
+	    with your life. Anyway, I decided to give programming and linux up, I'm just going to make mead. See ya.
+	  </p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div hx-get="/partials/footer.html" hx-swap="outerHTML" hx-trigger="load"></div>
+  </body>
+</html>

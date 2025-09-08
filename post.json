@@ -1,8 +1,14 @@
 [
     {
-      "title": "A Vim User In A VSCode World",
-      "date": "09/03/2025",
-      "summary": "The only thing I'm known for in my office is that I use vim. They call me VRon",
-      "link": "posts/post1.html"
-  }
+	"title": "Life Under Linux",
+	"date": "09/07/2025",
+	"summary": "A very satirical take on my Linux journey.",
+	"link": "posts/post2.html"
+    },
+    {
+	"title": "A Vim User In A VSCode World",
+	"date": "09/03/2025",
+	"summary": "The only thing I'm known for in my office is that I use vim. They call me VRon.",
+	"link": "posts/post1.html"
+    }
 ]
