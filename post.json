@@ -1,14 +1,14 @@
 [
-    {
-	"title": "Life Under Linux (CONTENT WARNING: OFFENSIVE)",
-	"date": "09/07/2025",
-	"summary": "A very satirical take on my Linux journey.",
-	"link": "posts/post2.html"
-    },
-    {
-	"title": "A Vim User In A VSCode World",
-	"date": "09/03/2025",
-	"summary": "The only thing I'm known for in my office is that I use vim. They call me VRon.",
-	"link": "posts/post1.html"
-    }
+	{
+		"title": "AI Is Ruining your mind",
+		"date": "10/29/2025",
+		"summary": "As the title implies, I really think AI rots the brain",
+		"link": "posts/post2.html"
+	},
+	{
+		"title": "A Vim User In A VSCode World",
+		"date": "09/03/2025",
+		"summary": "The only thing I'm known for in my office is that I use vim. They call me VRon.",
+		"link": "posts/post1.html"
+	}
 ]
